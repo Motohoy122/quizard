@@ -1,6 +1,14 @@
 <h1>Quizard</h1>
+<br>
+<div class="booyah-box offset-1" >
 <h2>Are you a cat or a dog person?</h2>
+<%= link_to "Answer!", new_answer_path %>
 <br>
-<h2>What's your favorite color?</h2>
 <br>
-<h2>What's your favorite car?</h2>
+<h2><b>Previous Answers</b></h2>
+<% @answers.each do |answer| %>
+  <div class="row">
+    <h4><%= answer.response %></h4>
+  </div>
+<% end %>
+</div>
